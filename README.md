@@ -2,9 +2,9 @@
 
 Commands to build docker image and run docker container:
 
-Docker Image Build Command: Docker build -t <ImageName> . (Command should be executed from the path where Dockerfile exists)
+Docker Image Build Command: Docker build -t ImageName . (Command should be executed from the path where Dockerfile exists)
   
-Docker Container Run Command: Docker run -d -p 8080:8080 --name <containername> <ImageName>
+Docker Container Run Command: Docker run -d -p 8080:8080 --name containername ImageName
   
 1) Application url should return a greeting such as Hello! as json or plain text (ex: when you open a browser and navigate to http://localhost:8080, it should return Hello! plain text.)
 
