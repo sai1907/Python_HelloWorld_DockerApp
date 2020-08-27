@@ -8,7 +8,7 @@ import datetime
 app = Flask(__name__)    # Construct an instance of Flask class for our webapp
 
 app.config["DEBUG"] = True
-status = {"status": "OK", "version": "0.0.1",
+status = {"status": "200 OK", "version": "0.0.1",
        "uptime": "up since " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
 
 
@@ -16,8 +16,8 @@ status = {"status": "OK", "version": "0.0.1",
 def home():
     return render_template('index.html')
 
-@app.route('/healthcheck', methods=['GET'])
-def healthcheck():
+@app.route('/healthz', methods=['GET'])
+def healthz():
     return jsonify(status)
 
 
