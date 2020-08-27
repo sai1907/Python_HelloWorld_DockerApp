@@ -8,16 +8,16 @@ Docker Container Run Command: Docker run -d -p 8080:8080 --name containername Im
   
 1) Application url should return a greeting such as Hello! as json or plain text (ex: when you open a browser and navigate to http://localhost:8080, it should return Hello! plain text.)
 
-       After running docker container on local machine, when user open a browser and navigate to http://localhost:8080, it will show Hello! plain text greeting.
+       After running docker container on local machine, when user open a browser and navigate to http://localhost:8080, it will show Hello! plain text greeting. In my case I have used AWS EC2 server, URL: http://ec2-34-227-18-112.compute-1.amazonaws.com:8080.
 
  2) Application should provide a health endpoint (http://localhost:8080/healthz) that returns HTTP status (200 OK) which indicates health of the application and returns a valid json with the following information:
  
-         Healthcheck endpoint: http://localhost:8080/healthz will return below format status.
+         Healthcheck endpoint: http://ec2-34-227-18-112.compute-1.amazonaws.com:8080/healthz return below format status.
  
               {
-             "status": "200 OK",
-             "version": "0.0.1",
-             "uptime": "up since 2020-08-04 08:00:05"
+            "status": "200 OK", 
+            "uptime": "up since 2020-08-26 18:59:51", 
+            "version": "0.0.1"
               }
 
 3) What other information would you add to health endpoint json object in step 2? Explain what would be the use case for that extra information?
