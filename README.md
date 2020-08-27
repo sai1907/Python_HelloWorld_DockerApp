@@ -14,11 +14,11 @@ Docker Container Run Command: Docker run -d -p 8080:8080 --name containername Im
  
          Healthcheck endpoint: http://localhost:8080/healthz will return below format status.
  
- {
-  "status": "200 OK",
-  "version": "0.0.1",
-  "uptime": "up since 2020-08-04 08:00:05"
-}
+              {
+             "status": "200 OK",
+             "version": "0.0.1",
+             "uptime": "up since 2020-08-04 08:00:05"
+              }
 
 3) What other information would you add to health endpoint json object in step 2? Explain what would be the use case for that extra information?
 
@@ -63,7 +63,7 @@ Docker Container Run Command: Docker run -d -p 8080:8080 --name containername Im
           Unit Testing and Build Stage: This will help testing code during build process.
           Code Analysis: To find vulnerabilities in application.
           Testing: This can be done in multiple stages (Integration testing, Load testing etc.)
-          Change Process: This requires test results, approvals from product owners to deploy application to Prod. Change board will take a decision based on test results,      change window and analyze if it requires downtime.
+          Change Process: This requires test results, approvals from product owners to deploy application to Prod. Change board will take a decision based on test results, change window and analyze if it requires downtime.
           Deploy: Deploying application to Environment. 
 
 
