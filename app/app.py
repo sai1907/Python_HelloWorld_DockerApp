@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 """
-hello_flask: First Python-Flask webapp
+hello_flask: Python-Flask webapp
 """
 from flask import Flask, jsonify, request, render_template   # From module flask import class Flask
 import datetime
